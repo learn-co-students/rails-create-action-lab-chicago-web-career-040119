@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    # p params
+     p params
     @student = Student.find(params[:id])
   end
 
@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
     @student.first_name = params[:first_name]
     @student.last_name = params[:last_name]
     @student.save
-    redirect_to student_path(@student)
+    redirect_to @student
   end
 
 end
